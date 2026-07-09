@@ -30,7 +30,27 @@ app-server threads. Agent Lens uses its JSON output for the live app-server
 path, while local Codex rollout JSONL remains the default source for offline
 thread collection.
 
-## Install Dependencies
+## Install
+
+Download the archive for your platform from [GitHub Releases](https://github.com/kcosr/agent-lens/releases).
+
+Supported release platforms are:
+
+- `linux-x86_64`
+- `linux-arm64`
+- `macos-x86_64`
+- `macos-arm64`
+
+Verify the archive against the accompanying `SHA256SUMS` file, extract it, and install the binary on your `PATH`:
+
+```bash
+tar -xzf agent-lens-<version>-linux-x86_64.tar.gz
+mkdir -p ~/.local/bin
+install -m 755 agent-lens-<version>-linux-x86_64/agent-lens ~/.local/bin/agent-lens
+agent-lens --help
+```
+
+## Development
 
 ```bash
 npm install
@@ -50,6 +70,13 @@ Build a standalone Bun executable:
 ```bash
 npm run build:bun
 ./dist-bin/agent-lens --help
+```
+
+Maintainers create a versioned GitHub release with verified archives and checksums:
+
+```bash
+npm run release -- current
+npm run release -- patch
 ```
 
 ## Generate A Report
