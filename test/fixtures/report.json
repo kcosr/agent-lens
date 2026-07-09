@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "metadata": {
+    "generatedAt": "2026-06-08T14:02:00.000Z",
+    "range": {
+      "since": "2026-06-08T14:00:00.000Z",
+      "until": "2026-06-08T15:00:00.000Z"
+    },
+    "sources": ["assistant", "codex-threads"],
+    "eventCount": 2,
+    "annotationCount": 0,
+    "redactionEnabled": true,
+    "version": "0.1.0"
+  },
+  "threads": [
+    {
+      "id": "assistant:pi-session-1",
+      "source": "assistant",
+      "label": "Assistant pi-sessi",
+      "sessionId": "pi-session-1",
+      "cwd": "/tmp/assistant",
+      "createdAt": "2026-06-08T14:00:00.000Z",
+      "updatedAt": "2026-06-08T14:02:00.000Z",
+      "status": "session-file"
+    }
+  ],
+  "events": [
+    {
+      "id": "assistant:user-1",
+      "source": "assistant",
+      "sessionId": "pi-session-1",
+      "cwd": "/tmp/assistant",
+      "timestamp": "2026-06-08T14:01:00.000Z",
+      "role": "user",
+      "kind": "message",
+      "text": "Please check /tmp/project.",
+      "title": "User message"
+    },
+    {
+      "id": "assistant:assistant-1",
+      "source": "assistant",
+      "sessionId": "pi-session-1",
+      "cwd": "/tmp/assistant",
+      "timestamp": "2026-06-08T14:01:04.000Z",
+      "role": "assistant",
+      "kind": "message",
+      "text": "I checked /tmp/project/README.md.",
+      "title": "Assistant message"
+    }
+  ],
+  "annotations": [],
+  "notices": [],
+  "artifacts": ["/tmp/project", "/tmp/project/README.md"]
+}

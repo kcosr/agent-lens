@@ -1,0 +1,30 @@
+{
+  "name": "agent-lens",
+  "version": "0.1.0",
+  "description": "Merge Assistant Pi, Claude, and Codex JSONL sessions into a self-contained timeline report.",
+  "type": "module",
+  "bin": {
+    "agent-lens": "dist/cli/main.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    ".specs"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json && node scripts/chmod-bin.mjs",
+    "build:bun": "node scripts/build-bun.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:smoke": "npm run build && node dist/cli/main.js render --input test/fixtures/report.json --annotations test/fixtures/annotations.json --out /tmp/agent-lens-smoke.html",
+    "check": "npm run typecheck && npm run test && npm run test:smoke"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.30",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

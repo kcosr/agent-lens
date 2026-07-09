@@ -1,0 +1,11 @@
+{
+  "annotations": [
+    {
+      "id": "note-1",
+      "kind": "note",
+      "title": "Fixture Note",
+      "markdown": "This is a fixture annotation.",
+      "timestamp": "2026-06-08T14:01:02.000Z"
+    }
+  ]
+}

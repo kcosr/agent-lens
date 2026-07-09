@@ -1,0 +1,8 @@
+{"timestamp":"2026-06-08T14:00:00.000Z","type":"session_meta","payload":{"id":"codex-thread-1","timestamp":"2026-06-08T14:00:00.000Z","cwd":"/tmp/codex","originator":"codex-tui","cli_version":"0.137.0","source":"vscode","thread_source":"user","model_provider":"openai"}}
+{"timestamp":"2026-06-08T14:00:00.010Z","type":"response_item","payload":{"type":"message","role":"user","content":[{"type":"input_text","text":"<environment_context>\n  <cwd>/tmp/codex</cwd>\n</environment_context>"}]}}
+{"timestamp":"2026-06-08T14:00:01.000Z","type":"event_msg","payload":{"type":"task_started","turn_id":"turn-a","started_at":1780927201}}
+{"timestamp":"2026-06-08T14:00:02.000Z","type":"event_msg","payload":{"type":"user_message","message":"Review this change.","images":[]}}
+{"timestamp":"2026-06-08T14:00:02.100Z","type":"response_item","payload":{"type":"message","role":"user","content":[{"type":"input_text","text":"Review this change."}]}}
+{"timestamp":"2026-06-08T14:00:03.000Z","type":"event_msg","payload":{"type":"agent_message","message":"I will review it."}}
+{"timestamp":"2026-06-08T14:00:04.000Z","type":"response_item","payload":{"type":"message","role":"assistant","content":[{"type":"output_text","text":"I will review it."}]}}
+{"timestamp":"2026-06-08T14:00:05.000Z","type":"event_msg","payload":{"type":"task_complete","turn_id":"turn-a"}}

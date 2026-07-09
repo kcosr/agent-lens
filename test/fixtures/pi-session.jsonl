@@ -1,0 +1,7 @@
+{"type":"session","version":3,"id":"pi-session-1","timestamp":"2026-06-08T14:00:00.000Z","cwd":"/tmp/assistant"}
+{"type":"message","id":"user-1","parentId":null,"timestamp":"2026-06-08T14:01:00.000Z","message":{"role":"user","content":[{"type":"text","text":"Please check /tmp/project and use Authorization: Bearer secret-token-1234567890"}],"timestamp":1780927260000}}
+{"type":"custom","id":"req-1","parentId":"user-1","timestamp":"2026-06-08T14:01:01.000Z","customType":"assistant.request_start","data":{"v":1,"requestId":"req-1","trigger":"user"}}
+{"type":"custom","id":"tool-1","parentId":"req-1","timestamp":"2026-06-08T14:01:02.000Z","customType":"assistant.tool_call","data":{"turnId":"req-1","payload":{"toolName":"exec","text":"cat /tmp/project/README.md"}}}
+{"type":"custom","id":"tool-2","parentId":"tool-1","timestamp":"2026-06-08T14:01:03.000Z","customType":"assistant.tool_result","data":{"turnId":"req-1","payload":{"toolName":"exec","result":"ok api_key=abc1234567890"}}}
+{"type":"message","id":"assistant-1","parentId":"tool-2","timestamp":"2026-06-08T14:01:04.000Z","message":{"role":"assistant","content":[{"type":"text","text":"I checked /tmp/project/README.md."}],"timestamp":1780927264000}}
+{"type":"custom","id":"req-end-1","parentId":"assistant-1","timestamp":"2026-06-08T14:01:05.000Z","customType":"assistant.request_end","data":{"v":1,"requestId":"req-1","status":"completed"}}
